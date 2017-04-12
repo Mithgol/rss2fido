@@ -1,0 +1,15 @@
+{
+"name": "rss2fido",
+"bin": "./rss2fido.js",
+"preferGlobal": true,
+"main": "r2f-core.js",
+"version": "0.0.1",
+"description": "Prepares RSS entries for being posted to Fidonet.",
+"keywords": ["Fidonet", "Fido", "RSS"],
+"author": { "name": "Mithgol the Webmaster" },
+"license": "MIT",
+"repository": {
+   "type": "git",
+   "url": "https://github.com/Mithgol/rss2fido.git"
+}
+}
