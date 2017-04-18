@@ -13,7 +13,8 @@
    "url": "https://github.com/Mithgol/rss2fido.git"
 },
 "dependencies": {
-   "feedme": "~1.0.0"
+   "feedme": "~1.0.0",
+   "request": "~2.81.0"
 },
 "scripts": {
    "test": "jshint --verbose rss2fido.js r2f-core.js"
