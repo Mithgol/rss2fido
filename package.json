@@ -14,7 +14,8 @@
 },
 "dependencies": {
    "feedme": "~1.0.0",
-   "request": "~2.81.0"
+   "request": "~2.81.0",
+   "simteconf": "~0.7.0"
 },
 "scripts": {
    "test": "jshint --verbose rss2fido.js r2f-core.js"
