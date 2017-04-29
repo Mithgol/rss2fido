@@ -29,3 +29,8 @@ node_modules
 
 # NPM error logs
 npm-debug.log
+
+# Project specific
+rss2fido.config
+*.rss.txt
+*.lastread.txt
