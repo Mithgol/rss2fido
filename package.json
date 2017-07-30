@@ -13,6 +13,7 @@
    "url": "https://github.com/Mithgol/rss2fido.git"
 },
 "dependencies": {
+   "ciel": "~0.3.0",
    "feedme": "~1.0.0",
    "htmlparser2": "~3.9.2",
    "request": "~2.81.0",
