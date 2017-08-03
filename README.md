@@ -26,6 +26,29 @@ You may now move that directory (for example, on a flash drive) across syst
 
 Unlike the above (`npm -g`), the application does not appear in the `PATH`, and thus you'll have to run it directly from the application's directory. You'll also have to run `node rss2fido` instead of `rss2fido`.
 
+## Using RSS2Fido
+
+You may run the installed application by typing in the command line:
+
+`rss2fido loginName textOutput fileLastRead`
+
+It uses the following parameters:
+
+* `textOutput` — path to an output text file. That is the file where the recent RSS entries should be written to.
+   * If the path is not absolute, it is treated as relative to the directory where RSS2Fido resides.
+
+* `fileLastRead` — path to a file where the ID of the last read RSS entries is stored.
+   * If the path is not absolute, it is treated as relative to the directory where RSS2Fido resides.
+   * If the file (designated by `fileLastRead`) does not exist, then RSS2Fido cannot determine how many last RSS entries to post. The default maximum is used.
+
+An optional parameter `"--CHRS=CP866 2"` is accepted before or after any of the above parameters. If such parameter is present, RSS2Fido writes RSS entries in the given encoding instead of the default UTF-8 encoding.
+   * Instead of `CP866 2` such parameter can designate any of Level 2 (single-byte) encodings supported by the [FTS-5003.001](http://ftsc.org/docs/fts-5003.001) standard in Fidonet.
+   * That single-byte encoding must also be supported by the [`iconv-lite`](https://github.com/ashtuchkin/iconv-lite) module. (Don't worry, most of them are supported.)
+   * The corresponding `CHRS` kludge is added to the output message exactly as the [FTS-5003.001](http://ftsc.org/docs/fts-5003.001) standard dictates.
+   * Where a character or a sequence of characters from RSS cannot be represented in the designated encoding (for example, East Asian character “魔” in Russian CP866 encoding), a [Fidonet Unicode substring](https://github.com/Mithgol/fiunis) is created to represent such characters.
+
+An optional parameter `"--debug"` is accepted before or after any of the above parameters. If such parameter is present, RSS2Fido enters its debug mode.
+
 ## Testing RSS2Fido
 
 [![(build testing status)](https://img.shields.io/travis/Mithgol/rss2fido/master.svg?style=plastic)](https://travis-ci.org/Mithgol/rss2fido)
