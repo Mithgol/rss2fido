@@ -16,7 +16,7 @@
    "ciel": "~0.3.0",
    "feedme": "~1.2.0",
    "htmlparser2": "~3.9.2",
-   "request": "~2.83.0",
+   "request": "~2.85.0",
    "simteconf": "~1.0.0"
 },
 "scripts": {
